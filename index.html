@@ -18,119 +18,143 @@
 		<section class="container">
 			<div class="col-md-9">
 				<div class="btn-group">
-					<button type="button" class="btn btn-default">性別</button>
-				  <button type="button" class="btn btn-default">學科類別</button>
-				  <button type="button" class="btn btn-default">生活費</button>
-				  <button type="button" class="btn btn-default">感情狀態</button>
-				  <button type="button" class="btn btn-default">生活型態</button>
-				  <button type="button" class="btn btn-default">大學地點</button>
+					<button type="button" class="btn btn-default" id="btn1">性別</button>
+				 	<button type="button" class="btn btn-default" id="btn2">學科類別</button>
+					<button type="button" class="btn btn-default" id="btn3">生活費</button>
+					<button type="button" class="btn btn-default" id="btn4">感情狀態</button>
+					<button type="button" class="btn btn-default" id="btn5">生活型態</button>
+					<button type="button" class="btn btn-default" id="btn6">大學地點</button>
 				</div>
 				<form role="form">
 					<div class="form-group" id="q1">
 						<div class="radio">
 							<label>
-								<input type="radio" checked> 男
+								<input type="radio" name="gender" checked> 男
 							</label>
 							<label>
-								<input type="radio"> 女
-							</label>
-						</div>
-					</div>
-					<div class="form-group" id="q2">
-						<div class="radio">
-							<label>
-								<input type="radio" checked> 資訊學群
-							</label>
-							<label>
-								<input type="radio"> 工程學群
-							</label>
-							<label>
-								<input type="radio"> 數理化學群
-							</label>
-							<label>
-								<input type="radio"> 醫藥衛生學群
-							</label>
-							<label>
-								<input type="radio"> 生命科學學群
-							</label>
-							<label>
-								<input type="radio"> 生物資源學群
-							</label>
-							<label>
-								<input type="radio"> 地球與環境學群
-							</label>
-							<label>
-								<input type="radio"> 建築與設計學群
-							</label>
-							<label>
-								<input type="radio"> 藝術學群
-							</label>
-							<label>
-								<input type="radio"> 社會與心理學群
-							</label>
-							<label>
-								<input type="radio"> 大眾傳播學群
-							</label>
-							<label>
-								<input type="radio"> 外語學群
-							</label>
-							<label>
-								<input type="radio"> 文史哲學群
-							</label>
-							<label>
-								<input type="radio"> 教育學群
-							</label>
-							<label>
-								<input type="radio"> 法政學群
-							</label>
-							<label>
-								<input type="radio"> 管理學群
-							</label>
-							<label>
-								<input type="radio"> 財經學群
-							</label>
-							<label>
-								<input type="radio"> 遊憩與運動學群
+								<input type="radio" name="gender"> 女
 							</label>
 						</div>
 					</div>
-					<div class="form-group" id="q3">
+					<div class="form-group" id="q2" style="display: none;">
 						<div class="radio">
 							<label>
-								<input type="radio" checked> 10000以下
+								<input type="radio" name="subject" checked> 資訊學群
 							</label>
 							<label>
-								<input type="radio"> 10001~15000
+								<input type="radio" name="subject"> 工程學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 數理化學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 醫藥衛生學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 生命科學學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 生物資源學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 地球與環境學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 建築與設計學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 藝術學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 社會與心理學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 大眾傳播學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 外語學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 文史哲學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 教育學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 法政學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 管理學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 財經學群
+							</label>
+							<label>
+								<input type="radio" name="subject"> 遊憩與運動學群
 							</label>
 						</div>
 					</div>
-					<div class="form-group" id="q4">
+					<div class="form-group" id="q3" style="display: none;">
 						<div class="radio">
 							<label>
-								<input type="radio" checked> 單身
+								<input type="radio" name="expenses" checked> 10000以下
 							</label>
 							<label>
-								<input type="radio"> 情侶
+								<input type="radio" name="expenses"> 10001~15000
+							</label>
+							<label>
+								<input type="radio" name="expenses"> 15001~20000
+							</label>
+							<label>
+								<input type="radio" name="expenses"> 20001~25000
+							</label>
+							<label>
+								<input type="radio" name="expenses"> 25001~30000
+							</label>
+							<label>
+								<input type="radio" name="expenses"> 30001~35000
+							</label>
+							<label>
+								<input type="radio" name="expenses"> 35001~40000
+							</label>
+							<label>
+								<input type="radio" name="expenses"> 40001以上
 							</label>
 						</div>
 					</div>
-					<div class="form-group" id="q5">
+					<div class="form-group" id="q4" style="display: none;">
 						<div class="radio">
 							<label>
-								<input type="radio" checked> 住宿
+								<input type="radio" name="status" checked> 單身
 							</label>
 							<label>
-								<input type="radio"> 通勤
+								<input type="radio" name="status"> 情侶
 							</label>
 						</div>
 					</div>
-					<div class="form-group" id="q6">
+					<div class="form-group" id="q5" style="display: none;">
 						<div class="radio">
 							<label>
-								<input type="radio" checked> 台北市
+								<input type="radio" name="traffic" checked> 住宿
 							</label>
 							<label>
-								<input type="radio"> 新北市
+								<input type="radio" name="traffic"> 通勤
+							</label>
+						</div>
+					</div>
+					<div class="form-group" id="q6" style="display: none;">
+						<div class="radio">
+							<label>
+								<input type="radio" name="region" checked> 北部
+							</label>
+							<label>
+								<input type="radio" name="region"> 中部
+							</label>
+							<label>
+								<input type="radio" name="region"> 南部
+							</label>
+							<label>
+								<input type="radio" name="region"> 東部
 							</label>
 						</div>
 					</div>
@@ -148,6 +172,58 @@
 			</div>
 		</section>
 		
-		<footer class="container">123</footer>
+		<!-- button效果 -->
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btn1').click(function(){
+				$('#q1').fadeIn();
+				$('#q2').hide();
+				$('#q3').hide();
+				$('#q4').hide();
+				$('#q5').hide();
+				$('#q6').hide();
+			});
+			$('#btn2').click(function(){
+				$('#q1').hide();
+				$('#q2').fadeIn();
+				$('#q3').hide();
+				$('#q4').hide();
+				$('#q5').hide();
+				$('#q6').hide();
+			});
+			$('#btn3').click(function(){
+				$('#q1').hide();
+				$('#q2').hide();
+				$('#q3').fadeIn();
+				$('#q4').hide();
+				$('#q5').hide();
+				$('#q6').hide();
+			});
+			$('#btn4').click(function(){
+				$('#q1').hide();
+				$('#q2').hide();
+				$('#q3').hide();
+				$('#q4').fadeIn();
+				$('#q5').hide();
+				$('#q6').hide();
+			});
+			$('#btn5').click(function(){
+				$('#q1').hide();
+				$('#q2').hide();
+				$('#q3').hide();
+				$('#q4').hide();
+				$('#q5').fadeIn();
+				$('#q6').hide();
+			});
+			$('#btn6').click(function(){
+				$('#q1').hide();
+				$('#q2').hide();
+				$('#q3').hide();
+				$('#q4').hide();
+				$('#q5').hide();
+				$('#q6').fadeIn();
+			});
+		});
+		</script>
 	</body>
 </html>
