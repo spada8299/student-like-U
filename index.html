@@ -17,13 +17,13 @@
 		</header>
 		<section class="container">
 			<div class="col-md-9">
-				<div class="btn-group">
-					<button type="button" class="btn btn-default" id="btn1">性別</button>
-				 	<button type="button" class="btn btn-default" id="btn2">學科類別</button>
-					<button type="button" class="btn btn-default" id="btn3">生活費</button>
-					<button type="button" class="btn btn-default" id="btn4">感情狀態</button>
-					<button type="button" class="btn btn-default" id="btn5">生活型態</button>
-					<button type="button" class="btn btn-default" id="btn6">大學地點</button>
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default" id="btn1"><input type="radio" name="toggle">性別</label>
+				 	<label class="btn btn-default" id="btn2"><input type="radio" name="toggle">學科類別</label>
+					<label class="btn btn-default" id="btn3"><input type="radio" name="toggle">生活費</label>
+					<label class="btn btn-default" id="btn4"><input type="radio" name="toggle">感情狀態</label>
+					<label class="btn btn-default" id="btn5"><input type="radio" name="toggle">生活型態</label>
+					<label class="btn btn-default" id="btn6"><input type="radio" name="toggle">大學地點</label>
 				</div>
 				<form role="form">
 					<div class="form-group" id="q1">
@@ -175,6 +175,7 @@
 		<!-- button效果 -->
 		<script type="text/javascript">
 		$(document).ready(function(){
+			$(".btn").slice(0, 1).button("toggle");
 			$('#btn1').click(function(){
 				$('#q1').fadeIn();
 				$('#q2').hide();
