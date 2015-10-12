@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<title>Student like U</title>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   		<script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src=""></script>
 	</head>
 	<body>
@@ -18,7 +19,7 @@
 		<section class="container">
 			<div class="col-md-9">
 				<div class="btn-group" data-toggle="buttons">
-					<label class="btn btn-default" id="btn1"><input type="radio" name="toggle">性別</label>
+					<label class="btn btn-default" id="btn1"><input type="radio" name="toggle" checked>性別</label>
 				 	<label class="btn btn-default" id="btn2"><input type="radio" name="toggle">學科類別</label>
 					<label class="btn btn-default" id="btn3"><input type="radio" name="toggle">生活費</label>
 					<label class="btn btn-default" id="btn4"><input type="radio" name="toggle">感情狀態</label>
@@ -26,137 +27,125 @@
 					<label class="btn btn-default" id="btn6"><input type="radio" name="toggle">大學地點</label>
 				</div>
 				<form role="form">
-					<div class="form-group" id="q1">
-						<div class="radio">
-							<label>
-								<input type="radio" name="gender" checked> 男
-							</label>
-							<label>
-								<input type="radio" name="gender"> 女
-							</label>
-						</div>
+					<div class="form-group" id="q1" data-toggle="buttons">
+						<label class="btn btn-primary">
+							<input type="radio" name="gender"><i class="fa fa-male fa-5x"></i><br><br>男
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="gender"> <i class="fa fa-female fa-5x"></i><br><br>女
+						</label>
 					</div>
-					<div class="form-group" id="q2" style="display: none;">
-						<div class="radio">
-							<label>
-								<input type="radio" name="subject" checked> 資訊學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 工程學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 數理化學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 醫藥衛生學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 生命科學學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 生物資源學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 地球與環境學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 建築與設計學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 藝術學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 社會與心理學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 大眾傳播學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 外語學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 文史哲學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 教育學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 法政學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 管理學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 財經學群
-							</label>
-							<label>
-								<input type="radio" name="subject"> 遊憩與運動學群
-							</label>
-						</div>
+					<div class="form-group" id="q2" style="display: none;" data-toggle="buttons">
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-laptop fa-4x"></i><br><br> 資訊學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-wrench fa-4x"></i><br><br> 工程學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-flask fa-4x"></i><br><br> 數理化學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-medkit fa-4x"></i></i><br><br> 醫藥衛生學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-leaf fa-4x"></i><br><br> 生命科學學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-tree fa-4x"></i><br><br> 生物資源學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-globe fa-4x"></i><br><br> 地球與環境學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-building fa-4x"></i><br><br> 建築與設計學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-paint-brush fa-4x"></i><br><br> 藝術學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-users fa-4x"></i><br><br> 社會與心理學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-television fa-4x"></i><br><br> 大眾傳播學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-language fa-4x"></i><br><br> 外語學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-book fa-4x"></i><br><br> 文史哲學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-graduation-cap fa-4x"></i><br><br> 教育學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-gavel fa-4x"></i><br><br> 法政學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-sitemap fa-4x"></i><br><br> 管理學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-usd fa-4x"></i><br><br> 財經學群
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="subject"><i class="fa fa-bicycle fa-4x"></i><br><br> 遊憩與運動學群
+						</label>
 					</div>
-					<div class="form-group" id="q3" style="display: none;">
-						<div class="radio">
-							<label>
-								<input type="radio" name="expenses" checked> 10000以下
-							</label>
-							<label>
-								<input type="radio" name="expenses"> 10001~15000
-							</label>
-							<label>
-								<input type="radio" name="expenses"> 15001~20000
-							</label>
-							<label>
-								<input type="radio" name="expenses"> 20001~25000
-							</label>
-							<label>
-								<input type="radio" name="expenses"> 25001~30000
-							</label>
-							<label>
-								<input type="radio" name="expenses"> 30001~35000
-							</label>
-							<label>
-								<input type="radio" name="expenses"> 35001~40000
-							</label>
-							<label>
-								<input type="radio" name="expenses"> 40001以上
-							</label>
-						</div>
+					<div class="form-group" id="q3" style="display: none;" data-toggle="buttons">
+						<label class="btn btn-primary">
+							<input type="radio" name="expenses"><i class="fa fa-money"></i><br><br> 10000以下
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="expenses"><i class="fa fa-money"></i><i class="fa fa-money"></i><br><br> 10001~15000
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="expenses"><i class="fa fa-money"></i><i class="fa fa-money"></i><i class="fa fa-money"></i><br><br> 15001~20000
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="expenses"><i class="fa fa-money"></i><i class="fa fa-money"></i><i class="fa fa-money"></i><i class="fa fa-money"></i><br><br> 20001~25000
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="expenses"><i class="fa fa-money fa-3x"></i><br> 25001~30000
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="expenses"><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><br><br> 30001~35000
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="expenses"><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><br><br> 35001~40000
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="expenses"><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><i class="fa fa-money fa-2x"></i><br><br> 40001以上
+						</label>
 					</div>
-					<div class="form-group" id="q4" style="display: none;">
-						<div class="radio">
-							<label>
-								<input type="radio" name="status" checked> 單身
-							</label>
-							<label>
-								<input type="radio" name="status"> 情侶
-							</label>
-						</div>
+					<div class="form-group" id="q4" style="display: none;" data-toggle="buttons">
+						<label class="btn btn-primary">
+							<input type="radio" name="status"><i class="icon-single fa-4x"></i><br><br> 單身
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="status"><i class="icon-couple fa-4x"></i><br><br> 情侶
+						</label>
 					</div>
-					<div class="form-group" id="q5" style="display: none;">
-						<div class="radio">
-							<label>
-								<input type="radio" name="traffic" checked> 住宿
-							</label>
-							<label>
-								<input type="radio" name="traffic"> 通勤
-							</label>
-						</div>
+					<div class="form-group" id="q5" style="display: none;" data-toggle="buttons">
+						<label class="btn btn-primary">
+							<input type="radio" name="traffic"><i class="fa fa-building-o fa-4x"></i> 住宿
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="traffic"><i class="fa fa-subway fa-4x"></i> 通勤
+						</label>
 					</div>
-					<div class="form-group" id="q6" style="display: none;">
-						<div class="radio">
-							<label>
-								<input type="radio" name="region" checked> 北部
-							</label>
-							<label>
-								<input type="radio" name="region"> 中部
-							</label>
-							<label>
-								<input type="radio" name="region"> 南部
-							</label>
-							<label>
-								<input type="radio" name="region"> 東部
-							</label>
-						</div>
+					<div class="form-group" id="q6" style="display: none;" data-toggle="buttons">
+						<label>
+							<input type="radio" name="region"> 北部
+						</label>
+						<label>
+							<input type="radio" name="region"> 中部
+						</label>
+						<label>
+							<input type="radio" name="region"> 南部
+						</label>
+						<label>
+							<input type="radio" name="region"> 東部
+						</label>
 					</div>
 				</form>
 			</div>
