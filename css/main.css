@@ -1,5 +1,25 @@
+/*
+#2D4059 -> 底色
+#EA5455 -> 紅橘色
+#F07B3F -> 橘色
+#FFD460 -> 黃色
+ */
+
 body {
 	background-color: #2D4059;
+}
+
+h2 {
+	color: #F07B3F;
+	padding: 10px;
+}
+
+header {
+	border-bottom: 3px solid #F07B3F;
+}
+
+ul {
+	background-color: #344966;
 }
 
 .fa-5x {
@@ -15,7 +35,7 @@ body {
 	width: 70px;
 	height: 70px;
 	border-radius: 50%;
-	line-height: 70px;
+	line-height: 65px;
     display: inline-block;
     background: white;
     z-index: 2;
@@ -23,7 +43,8 @@ body {
     left: 0;
     text-align: center;
     font-size: 25px;
-    background: #fafafa;
+    background: #2D4059;
+    border: 3px solid #FFD460; 
     top: 0;
 }
 
@@ -42,9 +63,18 @@ li a{
    text-align: center;
 }
 
+.nav-tabs {
+	border-bottom: 1px solid #EA5455;
+}
+
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     border: 0px solid #ddd; 
+    color: #EA5455;
     background: rgba(0,0,0,0);
+}
+
+.nav-tabs>li.active span {
+	border: 3px solid #EA5455; 
 }
 
 .nav-tabs>li>a:hover {
@@ -55,16 +85,34 @@ li a{
 .nav-tabs>li>a {
 	margin-right: auto;
 	margin-left: auto;
+	color: #FFD460;
+}
+
+li.active:after {
+	content: " ";
+	position: absolute;
+	left: 42%;
+	opacity:1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #EA5455;
 }
 
 .liner{
     height: 2px;
-    background: #ddd;
+    background: #FFD460;
     position: absolute;
     width: 80%;
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: 50px;
+    top: 55px;
     z-index: 1;
+}
+
+.tab-content {
+	background-color: #3a5373;
+	padding: 10px 50px 50px 50px;
+	min-height: 750px;
 }
