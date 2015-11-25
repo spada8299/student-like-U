@@ -31,6 +31,18 @@ ul {
 	margin-top: 10px;
 }
 
+.btn.active,
+.btn.active:hover {
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0);
+    color: #EA5455;
+}
+
+.btn,
+.btn:hover {
+	color: #FFD460;
+}
+
 .round {
 	width: 70px;
 	height: 70px;
