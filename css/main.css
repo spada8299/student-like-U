@@ -1,3 +1,7 @@
+body {
+	background-color: #2D4059;
+}
+
 .fa-5x {
 	font-size: 10em;
 }
@@ -7,3 +11,60 @@
 	margin-top: 10px;
 }
 
+.round {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	line-height: 70px;
+    display: inline-block;
+    background: white;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+    background: #fafafa;
+    top: 0;
+}
+
+li {
+	width: 16.6%;
+
+}
+
+li a{
+   width: 70px;
+   height: 70px;
+   margin: 20px auto;
+   border-radius: 100%;
+   border: 0;
+   padding: 0;
+   text-align: center;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    border: 0px solid #ddd; 
+    background: rgba(0,0,0,0);
+}
+
+.nav-tabs>li>a:hover {
+    border-color: rgba(0,0,0,0);
+    background: rgba(0,0,0,0);
+}
+
+.nav-tabs>li>a {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.liner{
+    height: 2px;
+    background: #ddd;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50px;
+    z-index: 1;
+}
