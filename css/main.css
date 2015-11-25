@@ -69,12 +69,15 @@ li a{
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     border: 0px solid #ddd; 
-    color: #EA5455;
+    color: #2D4059;
+    /*color: #EA5455;*/
     background: rgba(0,0,0,0);
 }
 
-.nav-tabs>li.active span {
-	border: 3px solid #EA5455; 
+.nav-tabs>li.active .round {
+	border: 3px solid #2D4059; 
+	/*border: 3px solid #EA5455; */
+	background: #EA5455;
 }
 
 .nav-tabs>li>a:hover {
