@@ -14,6 +14,10 @@ h2 {
 	padding: 10px;
 }
 
+.tab-content h2 {
+    color: #FFD460;
+}
+
 header {
 	border-bottom: 3px solid #F07B3F;
 }
@@ -38,9 +42,20 @@ ul {
     color: #EA5455;
 }
 
+.btn.active .fa-caret-up,
+.btn.active:hover .fa-caret-up {
+    display: block;
+}
+
 .btn,
 .btn:hover {
 	color: #FFD460;
+    font-size: 2em;
+}
+
+.btn .fa-caret-up,
+.btn:hover .fa-caret-up {
+    display: none;
 }
 
 .round {
@@ -130,4 +145,27 @@ li.active:after {
 	background-color: #3a5373;
 	padding: 10px 50px 50px 50px;
 	min-height: 750px;
+}
+
+.total-content {
+    color: #ec6566;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom:  3px solid #F07B3F;
+}
+
+.text-left {
+    position: relative;
+    left: 8px;
+}
+
+.text-center {
+    font-size: 36px;
+    color: #EA5455;
+}
+
+.text-right {
+    position: relative;
+    right: 8px;
 }

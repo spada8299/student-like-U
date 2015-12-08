@@ -10,7 +10,7 @@
   		<script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script type="text/javascript" src=""></script>
+		
 	</head>
 	<body>
 		<header class="container">
@@ -58,70 +58,43 @@
 						<div role="tabpanel" class="form-group tab-pane fade in active" id="q1">
 							<h2>Q1. 性別？</h2>
 							<div class="question-content" data-toggle="buttons">
-								<label class="btn">
-									<input type="radio" name="gender"><i class="fa fa-male fa-5x"></i><br><br>男
+								<label class="btn" for="male">
+									<input id="male" type="radio" name="gender"><i class="fa fa-male fa-5x"></i><br><br>男<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
-								<label class="btn">
-									<input type="radio" name="gender"> <i class="fa fa-female fa-5x"></i><br><br>女
+								<label class="btn" for="female">
+									<input id="female" type="radio" name="gender"><i class="fa fa-female fa-5x"></i><br><br>女<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 							</div>
 						</div>
 						<div role="tabpanel" class="form-group tab-pane fade" id="q2" data-toggle="buttons">
-							<h2>Q2. 學科類別？</h2>
+							<h2>Q2. 學科領域？</h2>
 							<div class="question-content" data-toggle="buttons">
 								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-laptop fa-4x"></i><br><br> 資訊學群
+									<input type="radio" name="subject"><i class="fa fa-graduation-cap fa-4x"></i><br><br> 教育<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-wrench fa-4x"></i><br><br> 工程學群
+									<input type="radio" name="subject"><i class="fa fa-paint-brush fa-4x"></i><br><br> 人文及藝術<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-flask fa-4x"></i><br><br> 數理化學群
+									<input type="radio" name="subject"><i class="fa fa-users fa-4x"></i><br><br> 社會科學、商業及法律<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-medkit fa-4x"></i></i><br><br> 醫藥衛生學群
+									<input type="radio" name="subject"><i class="fa fa-flask fa-4x"></i><br><br> 科學<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-leaf fa-4x"></i><br><br> 生命科學學群
+									<input type="radio" name="subject"><i class="fa fa-wrench fa-4x"></i><br><br> 工程、製造及營造<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-tree fa-4x"></i><br><br> 生物資源學群
+									<input type="radio" name="subject"><i class="fa fa-leaf fa-4x"></i><br><br> 農學<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-globe fa-4x"></i><br><br> 地球與環境學群
+									<input type="radio" name="subject"><i class="fa fa-medkit fa-4x"></i></i><br><br> 醫藥衛生及社福<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-building fa-4x"></i><br><br> 建築與設計學群
+									<input type="radio" name="subject"><i class="fa fa-cutlery fa-4x"></i><br><br> 服務<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-paint-brush fa-4x"></i><br><br> 藝術學群
-								</label>
-								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-users fa-4x"></i><br><br> 社會與心理學群
-								</label>
-								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-volume-up fa-4x"></i><br><br> 大眾傳播學群
-								</label>
-								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-language fa-4x"></i><br><br> 外語學群
-								</label>
-								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-book fa-4x"></i><br><br> 文史哲學群
-								</label>
-								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-graduation-cap fa-4x"></i><br><br> 教育學群
-								</label>
-								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-gavel fa-4x"></i><br><br> 法政學群
-								</label>
-								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-sitemap fa-4x"></i><br><br> 管理學群
-								</label>
-								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-usd fa-4x"></i><br><br> 財經學群
-								</label>
-								<label class="btn ">
-									<input type="radio" name="subject"><i class="fa fa-bicycle fa-4x"></i><br><br> 遊憩與運動學群
+									<input type="radio" name="subject"><i class="fa fa-question-circle fa-4x"></i><br><br> 其他<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 							</div>
 						</div>
@@ -129,30 +102,33 @@
 							<h2>Q3. 每學期生活費？</h2>
 							<div class="question-content" data-toggle="buttons">
 								<label class="btn ">
-									<input type="radio" name="expenses">NTD$<br>15000以下
+									<input type="radio" name="expenses">NTD$<br>15000以下<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="expenses">NTD$<br>15001~25000
+									<input type="radio" name="expenses">NTD$<br>15001~25000<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="expenses">NTD$<br>25001~35000
+									<input type="radio" name="expenses">NTD$<br>25001~35000<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="expenses">NTD$<br>35001~45000
+									<input type="radio" name="expenses">NTD$<br>35001~45000<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="expenses">NTD$<br>45001以上
+									<input type="radio" name="expenses">NTD$<br>45001以上<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 							</div>
 						</div>
 						<div role="tabpanel" class="form-group tab-pane fade" id="q4" data-toggle="buttons">
-							<h2>Q4. 感情狀態？</h2>
+							<h2>Q4. 學歷階段？</h2>
 							<div class="question-content" data-toggle="buttons">
 								<label class="btn ">
-									<input type="radio" name="status"><i class="icon-single fa-4x"></i><br><br> 單身
+									<input type="radio" name="status"><i class="fa fa-graduation-cap fa-4x"></i><br><br> 大學生<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="status"><i class="icon-couple fa-4x"></i><br><br> 情侶
+									<input type="radio" name="status"><i class="fa fa-graduation-cap fa-4x"></i><i class="fa fa-graduation-cap fa-4x"></i><br><br> 碩士生<br><i class="fa fa-caret-up fa-3x"></i>
+								</label>
+								<label class="btn ">
+									<input type="radio" name="status"><i class="fa fa-graduation-cap fa-4x"></i><br><i class="fa fa-graduation-cap fa-4x"></i><i class="fa fa-graduation-cap fa-4x"></i><br><br> 博士生<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 							</div>
 						</div>
@@ -160,10 +136,10 @@
 							<h2>Q5. 生活型態？</h2>
 							<div class="question-content" data-toggle="buttons">
 								<label class="btn ">
-									<input type="radio" name="traffic"><i class="fa fa-building-o fa-4x"></i> 住宿
+									<input type="radio" name="traffic"><i class="fa fa-building-o fa-4x"></i> 住宿<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn ">
-									<input type="radio" name="traffic"><i class="fa fa-subway fa-4x"></i> 通勤
+									<input type="radio" name="traffic"><i class="fa fa-subway fa-4x"></i> 通勤<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 							</div>
 						</div>
@@ -171,16 +147,16 @@
 							<h2>Q6. 學校地點？</h2>
 							<div class="question-content" data-toggle="buttons">
 								<label class="btn">
-									<input type="radio" name="region"> 北部
+									<input type="radio" name="region"> 北部<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn">
-									<input type="radio" name="region"> 中部
+									<input type="radio" name="region"> 中部<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn">
-									<input type="radio" name="region"> 南部
+									<input type="radio" name="region"> 南部<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 								<label class="btn">
-									<input type="radio" name="region"> 東部
+									<input type="radio" name="region"> 東部<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
 							</div>	
 						</div>
@@ -189,7 +165,7 @@
 				
 			</div>
 			<div class="col-md-3">
-				<div class="bg-success">
+				<div class="total-content">
 					<p class="text-left">總共有</p>
 					<p class="text-center">1339849</p>
 					<p class="text-right">位學生跟您很像</p>
@@ -199,60 +175,9 @@
 				</div>
 			</div>
 		</section>
-		
-		<!-- button效果 -->
-		<script type="text/javascript">
-		$(document).ready(function(){
-			$(".btn").slice(0, 1).button("toggle");
-			$('#btn1').click(function(){
-				$('#q1').fadeIn();
-				$('#q2').hide();
-				$('#q3').hide();
-				$('#q4').hide();
-				$('#q5').hide();
-				$('#q6').hide();
-			});
-			$('#btn2').click(function(){
-				$('#q1').hide();
-				$('#q2').fadeIn();
-				$('#q3').hide();
-				$('#q4').hide();
-				$('#q5').hide();
-				$('#q6').hide();
-			});
-			$('#btn3').click(function(){
-				$('#q1').hide();
-				$('#q2').hide();
-				$('#q3').fadeIn();
-				$('#q4').hide();
-				$('#q5').hide();
-				$('#q6').hide();
-			});
-			$('#btn4').click(function(){
-				$('#q1').hide();
-				$('#q2').hide();
-				$('#q3').hide();
-				$('#q4').fadeIn();
-				$('#q5').hide();
-				$('#q6').hide();
-			});
-			$('#btn5').click(function(){
-				$('#q1').hide();
-				$('#q2').hide();
-				$('#q3').hide();
-				$('#q4').hide();
-				$('#q5').fadeIn();
-				$('#q6').hide();
-			});
-			$('#btn6').click(function(){
-				$('#q1').hide();
-				$('#q2').hide();
-				$('#q3').hide();
-				$('#q4').hide();
-				$('#q5').hide();
-				$('#q6').fadeIn();
-			});
-		});
-		</script>
+		<script type="text/javascript" src="js/jquery.animateNumber.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/data.js"></script>
+		<!-- button效果 -->		
 	</body>
 </html>
