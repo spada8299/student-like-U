@@ -60,7 +60,15 @@ $(document).ready(function() {
 				count = count*rateAry[i];
 			}
 		}
-		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		if (count < 10 && $('#total').text() == "少於10") {
+			console.log('in!');
+		} else if (count < 10 ) {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: 10 }, 'normal', function() {
+				$('#total').text('少於10');
+			});
+		} else {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		}
 	});
 	$('#q2 .btn').click(function() {
 		myAry[1] = $(this).children('input').val();
@@ -90,7 +98,15 @@ $(document).ready(function() {
 				count = count*rateAry[i];
 			}
 		}
-		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		if (count < 10 && $('#total').text() == "少於10") {
+			console.log('in!');
+		} else if (count < 10 ) {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: 10 }, 'normal', function() {
+				$('#total').text('少於10');
+			});
+		} else {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		}
 	});
 	$('#q3 .btn').click(function() {
 		myAry[2] = $(this).children('input').val();
@@ -112,7 +128,15 @@ $(document).ready(function() {
 				count = count*rateAry[i];
 			}
 		}
-		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		if (count < 10 && $('#total').text() == "少於10") {
+			console.log('in!');
+		} else if (count < 10 ) {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: 10 }, 'normal', function() {
+				$('#total').text('少於10');
+			});
+		} else {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		}
 	});
 	$('#q4 .btn').click(function() {
 		myAry[3] = $(this).children('input').val();
@@ -132,7 +156,15 @@ $(document).ready(function() {
 				count = count*rateAry[i];
 			}
 		}
-		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		if (count < 10 && $('#total').text() == "少於10") {
+			console.log('in!');
+		} else if (count < 10 ) {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: 10 }, 'normal', function() {
+				$('#total').text('少於10');
+			});
+		} else {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		}
 	});
 	$('#q5 .btn').click(function() {
 		myAry[4] = $(this).children('input').val();
@@ -148,7 +180,15 @@ $(document).ready(function() {
 				count = count*rateAry[i];
 			}
 		}
-		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		if (count < 10 && $('#total').text() == "少於10") {
+			console.log('in!');
+		} else if (count < 10 ) {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: 10 }, 'normal', function() {
+				$('#total').text('少於10');
+			});
+		} else {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		}
 	});
 	$('#q6 .btn').click(function() {
 		myAry[5] = $(this).children('input').val();
@@ -170,6 +210,14 @@ $(document).ready(function() {
 				count = count*rateAry[i];
 			}
 		}
-		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		if (count < 10 && $('#total').text() == "少於10") {
+			console.log('in!');
+		} else if (count < 10 ) {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: 10 }, 'normal', function() {
+				$('#total').text('少於10');
+			});
+		} else {
+			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		}
 	});
 });
