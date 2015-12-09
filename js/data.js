@@ -41,3 +41,135 @@ var Number_of_area = [
 ["Yilan",24],["Hualien",25],["Taitung",26],
 ["Penghu",29],["Kinmen",30]
 ];
+
+var myAry = []
+var rateAry = [];
+
+$(document).ready(function() {
+	$('#q1 .btn').click(function() {
+		myAry[0] = $(this).children('input').val();
+		if ($(this).children('input').val() == "male") {
+			rateAry[0] = Gender[1];
+		} else {
+			rateAry[0] = Gender[2];
+		}
+		console.log(myAry, rateAry, rateAry.length);
+		var count = 1339849;
+		for (var i = 0; i < 6; i++) {
+			if (rateAry[i]) {
+				count = count*rateAry[i];
+			}
+		}
+		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+	});
+	$('#q2 .btn').click(function() {
+		myAry[1] = $(this).children('input').val();
+		if ($(this).children('input').val() == "edu") {
+			rateAry[1] = Subject[0]/1339849;
+		} else if ($(this).children('input').val() == "art") {
+			rateAry[1] = Subject[3]/1339849;
+		} else if ($(this).children('input').val() == "society") {
+			rateAry[1] = Subject[6]/1339849;
+		} else if ($(this).children('input').val() == "science") {
+			rateAry[1] = Subject[9]/1339849;
+		} else if ($(this).children('input').val() == "engineering") {
+			rateAry[1] = Subject[12]/1339849;
+		} else if ($(this).children('input').val() == "agriculture") {
+			rateAry[1] = Subject[15]/1339849;
+		} else if ($(this).children('input').val() == "medical") {
+			rateAry[1] = Subject[18]/1339849;
+		} else if ($(this).children('input').val() == "serve") {
+			rateAry[1] = Subject[21]/1339849;
+		} else {
+			rateAry[1] = Subject[24]/1339849;
+		}
+		console.log(myAry, rateAry, rateAry.length);
+		var count = 1339849;
+		for (var i = 0; i < 6; i++) {
+			if (rateAry[i]) {
+				count = count*rateAry[i];
+			}
+		}
+		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+	});
+	$('#q3 .btn').click(function() {
+		myAry[2] = $(this).children('input').val();
+		if ($(this).children('input').val() == "e1") {
+			rateAry[2] = Expense[0];
+		} else if ($(this).children('input').val() == "e2") {
+			rateAry[2] = Expense[1];
+		} else if ($(this).children('input').val() == "e3") {
+			rateAry[2] = Expense[2];
+		} else if ($(this).children('input').val() == "e4") {
+			rateAry[2] = Expense[3];
+		} else {
+			rateAry[2] = Expense[4];
+		}
+		console.log(myAry, rateAry, rateAry.length);
+		var count = 1339849;
+		for (var i = 0; i < 6; i++) {
+			if (rateAry[i]) {
+				count = count*rateAry[i];
+			}
+		}
+		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+	});
+	$('#q4 .btn').click(function() {
+		myAry[3] = $(this).children('input').val();
+		if ($(this).children('input').val() == "l1") {
+			rateAry[3] = Level[0]/1339849;
+		} else if ($(this).children('input').val() == "l2") {
+			rateAry[3] = Level[3]/1339849;
+		} else if ($(this).children('input').val() == "l3") {
+			rateAry[3] = Level[6]/1339849;
+		} else {
+			rateAry[3] = Level[9]/1339849;
+		}
+		console.log(myAry, rateAry, rateAry.length);
+		var count = 1339849;
+		for (var i = 0; i < 6; i++) {
+			if (rateAry[i]) {
+				count = count*rateAry[i];
+			}
+		}
+		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+	});
+	$('#q5 .btn').click(function() {
+		myAry[4] = $(this).children('input').val();
+		if ($(this).children('input').val() == "dorm") {
+			rateAry[4] = Dorm[1];
+		} else {
+			rateAry[4] = Dorm[2];
+		}
+		console.log(myAry, rateAry, rateAry.length);
+		var count = 1339849;
+		for (var i = 0; i < 6; i++) {
+			if (rateAry[i]) {
+				count = count*rateAry[i];
+			}
+		}
+		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+	});
+	$('#q6 .btn').click(function() {
+		myAry[5] = $(this).children('input').val();
+		if ($(this).children('input').val() == "north") {
+			rateAry[5] = Student_area[0]/1339849;
+		} else if ($(this).children('input').val() == "central") {
+			rateAry[5] = Student_area[8]/1339849;
+		} else if ($(this).children('input').val() == "south") {
+			rateAry[5] = Student_area[15]/1339849;
+		} else if ($(this).children('input').val() == "east") {
+			rateAry[5] = Student_area[22]/1339849;
+		} else {
+			rateAry[5] = Student_area[27]/1339849;
+		}
+		console.log(myAry, rateAry, rateAry.length);
+		var count = 1339849;
+		for (var i = 0; i < 6; i++) {
+			if (rateAry[i]) {
+				count = count*rateAry[i];
+			}
+		}
+		$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+	});
+});
