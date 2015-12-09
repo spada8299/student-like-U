@@ -14,6 +14,35 @@ h2 {
 	padding: 10px;
 }
 
+.page1h1 {
+    position: absolute;
+    color: #EA5455;
+    top: 150px;
+    left: 10%;
+    z-index: 9;
+}
+
+.page1h2 {
+    position: absolute;
+    color: #ee7778;
+    top: 250px;
+    left: 15%;
+    z-index: 9;
+}
+
+.start-btn {
+    position: absolute;
+    background-color: #FFD460;
+    color: #2D4059;
+    border: none;
+    top: 350px;
+    right: 10%;
+    width: 250px;
+    height: 70px;
+    font-size: 32px;
+    z-index: 9;
+}
+
 .tab-content h2 {
     color: #FFD460;
 }
@@ -164,9 +193,23 @@ li.active:after {
     border-top: 1px solid #EA5455;
 }
 
+.result-bar {
+    color: #ec6566;
+    border-bottom:  1px solid #EA5455;
+    border-top: 1px solid #EA5455;
+    height: 110px;
+}
+
 .text-left {
     position: relative;
     left: 8px;
+}
+
+.result-left {
+    position: absolute;
+    left: 10%;
+    font-size: 28px;
+    top: 120px;
 }
 
 .text-center {
@@ -174,9 +217,24 @@ li.active:after {
     color: #EA5455;
 }
 
+.result-center {
+    font-size: 40px;
+    color: #EA5455;
+    position: absolute;
+    left: 40%;
+    top: 115px;
+}
+
 .text-right {
     position: relative;
     right: 8px;
+}
+
+.result-right {
+    position: absolute;
+    right: 10%;
+    font-size: 28px;
+    top: 120px;
 }
 
 .report-btn {

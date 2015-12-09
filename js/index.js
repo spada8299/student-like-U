@@ -1,6 +1,16 @@
 'use strict';
 
 $(document).ready(function() {
+	$('.start-btn').click(function() {
+		$('#page1').hide();
+		$('#page2').fadeIn();
+	});
+	$('.report-btn').click(function() {
+		$('#page2').hide();
+		$('#page3').fadeIn();
+		$('#result').text($('#total').text());
+	});
+
 	$('.btn').click(function () {
 		var otherBtn = $(this).parents('.question-content').children('.btn').not(this);
 	    $(this).children(".fa-caret-up").fadeIn();

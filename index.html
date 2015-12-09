@@ -16,9 +16,14 @@
 		<header class="container">
 			<h2 class="my-header">Student Like U</h2>
 		</header>
-		<section class="container">
+		<section class="container" id="page1">
+			<div>
+				<h1 class="page1h1">你知道全國有多少大學生跟你很像嗎？</h1>
+				<h2 class="page1h2">告訴我們一些關於你的事吧！</h2><button class="start-btn">開始測驗 <i class="fa fa-arrow-circle-right"></i></button>
+			</div>
+		</section>
+		<section class="container" id="page2" style="display: none;">
 			<div class="col-md-9">
-				
 				<div class="" data-toggle="buttons">
 					<ul class="nav nav-tabs" id="myTab">
 						<div class="liner"></div>
@@ -189,6 +194,13 @@
 				<div class="report-btns">
 					<button class="report-btn disable" disabled>觀看屬於您的報告</button>
 				</div>
+			</div>
+		</section>
+		<section class="container" id="page3" style="display: none;">
+			<div class="result-bar">
+				<span class="result-left">全國有</span>
+				<span class="result-center"><span id="result">1339849</span></span>
+				<span class="result-right">位學生跟您很像</span>
 			</div>
 		</section>
 		<script type="text/javascript" src="js/jquery.animateNumber.min.js"></script>
