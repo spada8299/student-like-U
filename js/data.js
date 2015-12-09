@@ -42,8 +42,9 @@ var Number_of_area = [
 ["Penghu",29],["Kinmen",30]
 ];
 
-var myAry = []
+var myAry = [];
 var rateAry = [];
+var complete = 0;
 
 $(document).ready(function() {
 	$('#q1 .btn').click(function() {
@@ -218,6 +219,18 @@ $(document).ready(function() {
 			});
 		} else {
 			$('#total').prop('number', Number($('#total').text())).animateNumber({ number: count });
+		}
+	});
+	$('.btn').click(function() {
+		for (var i = 0; i < 6; i++) {
+			if (rateAry[i]) {
+				complete++;
+			}
+		}
+		if (complete >= 6) {
+			$('.report-btn').prop("disabled", false).removeClass("disable");
+		} else {
+			complete = 0;
 		}
 	});
 });

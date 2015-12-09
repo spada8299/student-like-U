@@ -273,3 +273,11 @@ li.active:after {
     /*left: 30%;*/
     color: #ddd;
 }
+
+.disable {
+    opacity: .5;
+}
+
+.disable:hover {
+    cursor: not-allowed;
+}
