@@ -8,6 +8,8 @@
   		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   		<script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+  		<script src="http://d3js.org/d3.v3.min.js"></script>
+  		<script src="http://d3js.org/topojson.v1.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		
@@ -161,24 +163,25 @@
 							<div class="next-btn"><i class="fa fa-chevron-right"></i></div>
 						</div>
 						<div role="tabpanel" class="form-group tab-pane fade" id="q6" data-toggle="buttons">
-							<h2>Q6. 學校地點？</h2>
+							<h2>Q6. 學校地點？</h2><span id="areaName" style="color: #EA5455; font-size: 2em; margin-left: 20%;"></span>
 							<div class="pre-btn"><i class="fa fa-chevron-left"></i></div>
 							<div class="question-content" data-toggle="buttons">
-								<label class="btn">
+								<label class="btn" style="display: none;">
 									<input type="radio" name="region" value="north"> 北部<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
-								<label class="btn">
+								<label class="btn" style="display: none;">
 									<input type="radio" name="region" value="central"> 中部<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
-								<label class="btn">
+								<label class="btn" style="display: none;">
 									<input type="radio" name="region" value="south"> 南部<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
-								<label class="btn">
+								<label class="btn" style="display: none;">
 									<input type="radio" name="region" value="east"> 東部<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
-								<label class="btn">
+								<label class="btn" style="display: none;">
 									<input type="radio" name="region" value="other"> 外島<br><i class="fa fa-caret-up fa-3x"></i>
 								</label>
+								<svg id="map" style="width: 960px; height: 600px; position: absolute; top: 120px;"></svg>
 							</div>	
 						</div>
 					</div>
@@ -206,6 +209,7 @@
 		<script type="text/javascript" src="js/jquery.animateNumber.min.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/data.js"></script>
+		<script type="text/javascript" src="js/twGeo.js"></script>
 		<!-- button效果 -->		
 	</body>
 </html>

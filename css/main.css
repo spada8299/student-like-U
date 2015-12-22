@@ -339,3 +339,11 @@ li.active:after {
 .disable:hover {
     cursor: not-allowed;
 }
+
+.north:hover,
+.central:hover,
+.south:hover,
+.east:hover,
+.other:hover {
+    cursor: pointer;
+}
