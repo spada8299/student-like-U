@@ -12,7 +12,7 @@ var Subject =
 1469,0.4989,0.5011//other
 ];//9 subjects
 
-var Expense = [0.025,0.25,0.45,0.25,0.025];//this is an super expectation
+var Expense = [0.02,0.28,0.45,0.22,0.03];//this is an super expectation
 
 var Level = [1037062,0.5034,0.4966,//Daigakusei
 172968,0.559,0.441,//Daigakuinsei
