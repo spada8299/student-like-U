@@ -7,7 +7,7 @@ var Subject =
 127162,0.6654,0.3346,//science
 283167,0.8508,0.1492,//engineering
 27659,0.4936,0.5064,//agriculture
-155873,0.255,0745,//medical
+155873,0.255,0.745,//medical
 170297,0.4119,0.5881,//serve
 1469,0.4989,0.5011//other
 ];//9 subjects
@@ -15,7 +15,7 @@ var Subject =
 var Expense = [0.02,0.28,0.45,0.22,0.03];//this is an super expectation
 
 var Level = [1037062,0.5034,0.4966,//Daigakusei
-172968,0.559,0.441,//Daigakuinsei
+172968,0.559,0.441,//Daigakuinsei,
 30549,0.6888,0.3112,//Ph.D
 99270,0.2644,0.7356//expert
 ];
