@@ -23,9 +23,4 @@ $(document).ready(function() {
 	$('.pre-btn').click(function() {
 		$('.nav-tabs > .active').prev('li').find('a').trigger('click');
 	});
-	// if ( $('.btn').hasClass('.active') ) {
-	// 	$('.btn').children('.fa-caret-up').slideUp();
-	// } else {
-	// 	$('.btn').children('.fa-caret-up').hide();
-	// }
 });

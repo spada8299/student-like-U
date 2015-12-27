@@ -42,17 +42,79 @@ var Number_of_area = [
 ["Penghu",29],["Kinmen",30]
 ];
 
+// final chart data
+var cost_food = [4586,7460,845,4586];//every months
+var food_changeQ1 = [0.95,1.05];
+var food_changeQ2 = [1,1,1,1,1,1,1,1,1];
+var food_changeQ3 = [0.4,0.7,1,1.05,1.1];
+var food_changeQ4 = [1,1,1,1];
+var food_changeQ5 = [1.1,0.94];
+var food_changeQ6 = [1.05,1,0.95,1.1,1];
+
+var cost_travel = [819,4108,210];
+var travel_changeQ1 = [1,1];
+var travel_changeQ2 = [1,1,1,1,1,1,1,1,1];
+var travel_changeQ3 = [0.4,0.85,0.93,1.04,1.07];
+var travel_changeQ4 = [1,1,1,1];
+var travel_changeQ5 = [1,0.3];
+var travel_changeQ6 = [1,1,1,1,1];
+
+var cost_ent = [653,4478,70];
+var ent_changeQ1 = [0.96,1.04];
+var ent_changeQ2 = [1,1,1,1,1,1,1,1];
+var ent_changeQ3 = [0.2,0.65,1,1.2,2.1];
+var ent_changeQ4 = [1,1,1,1];
+var ent_changeQ5 = [1,1];
+var ent_changeQ6 = [1,1,1,1,1];
+
+var date = [0.38];
+var date_jaja = [0.12];
+var date_changeQ1 = [1,1];
+var date_changeQ2 = [1,1.08,1.5,0.82,0.71,0.94,1,1,1];
+var date_changeQ2_jaja = [1,3.842,0.942,0.26,0.22,0.1,0.32,0.896,1];
+var date_changeQ3 = [0.9,1,1,1,1.1];
+var date_changeQ4 = [1,1,1,1];
+var date_changeQ5 = [1,1];
+var date_changeQ6 = [1,1,1,1,1];
+
 var myAry = [];
 var rateAry = [];
 var complete = 0;
 
+var foodCostAry = [];
+var travelCostAry = [];
+var entCostAry = [];
+var dateAry = [];
+var dateJajaAry = [];
+
+var foodCostData = [];
+var dateData = [];
+var dateJajaData = [];
+
 $(document).ready(function() {
+	var s = d3.select('div#result')
+                .append('svg')
+                .attr({
+                  'width':970,
+                  'height':400,
+                  'id': 'foodSvg'
+                });
+    var svg = d3.select('div#result')
+    			.append('svg')
+    			.attr({
+    				'width': 970,
+    				'height': 400,
+                	'id': 'dateSvg'
+    			}).append("g")
+    			.attr("transform", "translate(" + 970 / 2 + "," + 400 / 2 + ")");
 	$('#q1 .btn').click(function() {
 		myAry[0] = $(this).children('input').val();
 		if ($(this).children('input').val() == "male") {
 			rateAry[0] = Gender[1];
+			foodCostAry[0] = food_changeQ1[0];
 		} else {
 			rateAry[0] = Gender[2];
+			foodCostAry[0] = food_changeQ1[1];
 		}
 		console.log(myAry, rateAry, rateAry.length);
 		var count = 1339849;
@@ -75,22 +137,40 @@ $(document).ready(function() {
 		myAry[1] = $(this).children('input').val();
 		if ($(this).children('input').val() == "edu") {
 			rateAry[1] = Subject[0]/1339849;
+			foodCostAry[1] = food_changeQ2[0];
+			dateAry[0] = date_changeQ2[0];
 		} else if ($(this).children('input').val() == "art") {
 			rateAry[1] = Subject[3]/1339849;
+			foodCostAry[1] = food_changeQ2[1];
+			dateAry[0] = date_changeQ2[1];
 		} else if ($(this).children('input').val() == "society") {
 			rateAry[1] = Subject[6]/1339849;
+			foodCostAry[1] = food_changeQ2[2];
+			dateAry[0] = date_changeQ2[2];
 		} else if ($(this).children('input').val() == "science") {
 			rateAry[1] = Subject[9]/1339849;
+			foodCostAry[1] = food_changeQ2[3];
+			dateAry[0] = date_changeQ2[3];
 		} else if ($(this).children('input').val() == "engineering") {
 			rateAry[1] = Subject[12]/1339849;
+			foodCostAry[1] = food_changeQ2[4];
+			dateAry[0] = date_changeQ2[4];
 		} else if ($(this).children('input').val() == "agriculture") {
 			rateAry[1] = Subject[15]/1339849;
+			foodCostAry[1] = food_changeQ2[5];
+			dateAry[0] = date_changeQ2[5];
 		} else if ($(this).children('input').val() == "medical") {
 			rateAry[1] = Subject[18]/1339849;
+			foodCostAry[1] = food_changeQ2[6];
+			dateAry[0] = date_changeQ2[6];
 		} else if ($(this).children('input').val() == "serve") {
 			rateAry[1] = Subject[21]/1339849;
+			foodCostAry[1] = food_changeQ2[7];
+			dateAry[0] = date_changeQ2[7];
 		} else {
 			rateAry[1] = Subject[24]/1339849;
+			foodCostAry[1] = food_changeQ2[8];
+			dateAry[0] = date_changeQ2[8];
 		}
 		console.log(myAry, rateAry, rateAry.length);
 		var count = 1339849;
@@ -113,14 +193,19 @@ $(document).ready(function() {
 		myAry[2] = $(this).children('input').val();
 		if ($(this).children('input').val() == "e1") {
 			rateAry[2] = Expense[0];
+			foodCostAry[2] = food_changeQ3[0];
 		} else if ($(this).children('input').val() == "e2") {
 			rateAry[2] = Expense[1];
+			foodCostAry[2] = food_changeQ3[1];
 		} else if ($(this).children('input').val() == "e3") {
 			rateAry[2] = Expense[2];
+			foodCostAry[2] = food_changeQ3[2];
 		} else if ($(this).children('input').val() == "e4") {
 			rateAry[2] = Expense[3];
+			foodCostAry[2] = food_changeQ3[3];
 		} else {
 			rateAry[2] = Expense[4];
+			foodCostAry[2] = food_changeQ3[4];
 		}
 		console.log(myAry, rateAry, rateAry.length);
 		var count = 1339849;
@@ -143,12 +228,16 @@ $(document).ready(function() {
 		myAry[3] = $(this).children('input').val();
 		if ($(this).children('input').val() == "l1") {
 			rateAry[3] = Level[0]/1339849;
+			foodCostAry[3] = food_changeQ4[0];
 		} else if ($(this).children('input').val() == "l2") {
 			rateAry[3] = Level[3]/1339849;
+			foodCostAry[3] = food_changeQ4[1];
 		} else if ($(this).children('input').val() == "l3") {
 			rateAry[3] = Level[6]/1339849;
+			foodCostAry[3] = food_changeQ4[2];
 		} else {
 			rateAry[3] = Level[9]/1339849;
+			foodCostAry[3] = food_changeQ4[3];
 		}
 		console.log(myAry, rateAry, rateAry.length);
 		var count = 1339849;
@@ -171,8 +260,10 @@ $(document).ready(function() {
 		myAry[4] = $(this).children('input').val();
 		if ($(this).children('input').val() == "dorm") {
 			rateAry[4] = Dorm[1];
+			foodCostAry[4] = food_changeQ5[0];
 		} else {
 			rateAry[4] = Dorm[2];
+			foodCostAry[4] = food_changeQ5[1];
 		}
 		console.log(myAry, rateAry, rateAry.length);
 		var count = 1339849;
@@ -195,14 +286,19 @@ $(document).ready(function() {
 		myAry[5] = $(this).children('input').val();
 		if ($(this).children('input').val() == "north") {
 			rateAry[5] = Student_area[0]/1339849;
+			foodCostAry[5] = food_changeQ6[0];
 		} else if ($(this).children('input').val() == "central") {
 			rateAry[5] = Student_area[8]/1339849;
+			foodCostAry[5] = food_changeQ6[1];
 		} else if ($(this).children('input').val() == "south") {
 			rateAry[5] = Student_area[15]/1339849;
+			foodCostAry[5] = food_changeQ6[2];
 		} else if ($(this).children('input').val() == "east") {
 			rateAry[5] = Student_area[22]/1339849;
+			foodCostAry[5] = food_changeQ6[3];
 		} else {
 			rateAry[5] = Student_area[27]/1339849;
+			foodCostAry[5] = food_changeQ6[4];
 		}
 		console.log(myAry, rateAry, rateAry.length);
 		var count = 1339849;
@@ -227,10 +323,157 @@ $(document).ready(function() {
 				complete++;
 			}
 		}
+		console.log(foodCostAry);
 		if (complete >= 6) {
 			$('.report-btn').prop("disabled", false).removeClass("disable");
+			for (var i = 0; i < foodCostAry.length; i++){
+				cost_food[3] = cost_food[3] * foodCostAry[i];
+			}
+			// for (var i = 0; i < dateAry.length; i++){
+			// 	date[1] = date[1] * dateAry[i];
+			// }
+			for (var i = 0; i < cost_food.length; i++) {
+				foodCostData[i] = { x: i+1, w: cost_food[i]/20, value: cost_food[i] };
+			}
+			for (var i = 0; i < date.length*2 ; i+=2) {
+				dateData[i] = { status: 'couple', value: date[i] };
+				dateData[i+1] = { status: 'single', value: 1 - date[i] };
+			}
+			for (var i = 0; i < date_jaja.length*2 ; i+=2) {
+				dateJajaData[i] = { status: 'couple', value: date_jaja[i] };
+				dateJajaData[i+1] = { status: 'single', value: 1 - date_jaja[i] };
+			}
+			console.log(cost_food, foodCostData);
+			// _transition(foodCostData);
+			$('#foodBtn').click(function() {
+				_transition(foodCostData);
+				$('#foodSvg').show();
+				$('#dateSvg').hide();
+			});
+			$('#dateBtn').click(function() {
+				drawPie(dateData);
+				$('#foodSvg').hide();
+				$('#dateSvg').show();
+				// _transition();
+			});
+			$('#jajaBtn').click(function() {
+				drawPie(dateJajaData);
+				$('#foodSvg').hide();
+				$('#dateSvg').show();
+				// _transition();
+			});
 		} else {
 			complete = 0;
 		}
 	});
+
+	function _transition(data){
+		console.log(data);
+		s.selectAll('rect')
+		 .data(data)
+		 .enter()
+		 .append('rect')
+		 .attr({
+		  'fill':'#09c',
+		  'width':30,
+		  'height':0,
+		  'x':function(d){
+		    return (d.x-1) * 35;
+		  },
+		  'y':400
+		 })
+		 .transition()
+		 .duration(1500)
+		 .attr({
+		  'height':function(d){
+		    return d.w;
+		  },
+		  'y':function(d){
+		  	return 400 - d.w;
+		  }
+		 });
+
+		s.selectAll('text')
+		 .data(data)
+		 .enter()
+		 .append('text')
+		 .text(function(d){
+		  return 0  ;
+		 })
+		 .attr({
+		  'fill':'#000',
+		  'x':function(d){
+		    return (d.x-1) * 35;
+		  },
+		  'y':397
+		 })
+		 .transition()
+		 .duration(1500)
+		 .attr({
+		  'y':function(d){
+		    return 397 - d.w;
+		  }
+		 })
+		 .tween('number',function(d){
+		    var i = d3.interpolateRound(0, d.value);
+		      return function(t) {
+		      this.textContent = i(t);
+		    };
+		 });
+	};
+
+	function drawPie(data) {
+		console.log('pie:', data);
+		var radius = 200;
+		var color = d3.scale.ordinal()
+    		.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+		var arc = d3.svg.arc()
+		    .outerRadius(radius - 10)
+		    .innerRadius(radius - 100)
+		    .startAngle(function(d) { return d.startAngle; } )
+		    .endAngle(function(d) { return d.endAngle; } );
+
+		var labelArc = d3.svg.arc()
+		    .outerRadius(radius - 40)
+		    .innerRadius(radius - 40);
+
+		var pie = d3.layout.pie()
+		    .sort(null)
+		    .value(function(d) { return d.value; });
+
+		console.log(pie(data));
+		// console.log(startArc);
+
+		var elem = svg.selectAll('path')
+			.data(pie(data))
+			.enter();
+
+		var path = elem.append('path')
+			.attr({
+				'd': arc,
+				'fill': function(d) { return color(d.data.status); }
+			});
+
+		var text = elem.append('text')
+		.attr({
+			'transform': function(d) { return "translate(" + labelArc.centroid(d) + ")"; },
+	    	'dy': '.35em'
+	    }).text(function(d) { return d.data.status +' '+ d.data.value*100 +'%'; });
+
+		var newPath = svg.selectAll('path').data(pie(data));
+		console.log(newPath);
+		newPath.attr('d', arc);
+		var newText = svg.selectAll('text').data(pie(data));
+		newText.attr('transform', function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
+				.text(function(d) { return d.data.status +' '+ d.data.value*100 +'%'; });
+	};
+	function arcTween(a) {
+	  var i = d3.interpolate(this._current, a);
+	  this._current = i(0);
+	  return function(t) {
+	    return arc(i(t));
+	  };
+	};
 });
+

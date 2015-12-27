@@ -347,3 +347,7 @@ li.active:after {
 .other:hover {
     cursor: pointer;
 }
+
+#result {
+    margin-top: 50px;
+}
