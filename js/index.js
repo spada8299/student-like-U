@@ -13,8 +13,11 @@ $(document).ready(function() {
 
 	$('.btn').click(function () {
 		var otherBtn = $(this).parents('.question-content').children('.btn').not(this);
+		var qNum = $(this).parents('.tab-pane').attr("id");
+		console.log($('a[href=\'#'+ qNum +'\']'));
 	    $(this).children(".fa-caret-up").fadeIn();
 	    otherBtn.children('.fa-caret-up').hide();
+	    $('a[href=\'#'+ qNum +'\'] span i').addClass('fa fa-check');
 	});
 
 	$('.next-btn').click(function() {
@@ -22,5 +25,16 @@ $(document).ready(function() {
 	});
 	$('.pre-btn').click(function() {
 		$('.nav-tabs > .active').prev('li').find('a').trigger('click');
+	});
+	$('.btns button').click(function() {
+		$(this).addClass('chosen');
+		$('.btns button').not(this).removeClass('chosen');
+		$('#hint').hide();
+	});
+	$('#dateBtn').click(function() {
+		$('#jajaBtn').slideDown();
+	});
+	$('.btns button').not('#dateBtn, #jajaBtn').click(function() {
+		$('#jajaBtn').slideUp();
 	});
 });

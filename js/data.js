@@ -95,33 +95,31 @@ var dateAllData = [];
 var JajaAllData = [];
 
 $(document).ready(function() {
-	var s = d3.select('div#result')
+	var sw = 840;
+	var sh = 425;
+	var s = d3.select('div#resultChart')
                 .append('svg')
                 .attr({
-                  'width':970,
-                  'height':400,
+                  'width': sw,
+                  'height': sh,
                   'id': 'foodSvg'
                 });
-    var ps = d3.select('div#result')
+    $('#foodSvg').hide();
+    var ps = d3.select('div#resultChart')
     			.append('svg')
     			.attr({
-    				'width': 970,
-    				'height': 400,
+    				'width': sw,
+    				'height': sh,
                 	'id': 'dateSvg'
     			});
+    $('#dateSvg').hide();
     var allg = ps.append("g")
-    			.attr("transform", "translate(" + 970 / 4 + "," + 400 / 2 + ")");
-    	allg.append("text").text("全國").attr({
-    		'fill': '#FFD460',
-    		'text-anchor': 'middle',
-    	});
+    			.attr("transform", "translate(" + sw / 4 + "," + sh / 2 + ")");
+    	
 
     var likeg = ps.append("g")
-    			.attr("transform", "translate(" + 970*3 / 4 + "," + 400 / 2 + ")");
-    	likeg.append("text").text("Student like U").attr({
-    		'fill': '#FFD460',
-    		'text-anchor': 'middle',
-    	});
+    			.attr("transform", "translate(" + sw*3 / 4 + "," + sh / 2 + ")");
+    	
 	$('#q1 .btn').click(function() {
 		myAry[0] = $(this).children('input').val();
 		if ($(this).children('input').val() == "male") {
@@ -435,29 +433,37 @@ $(document).ready(function() {
 			// _transition(foodCostData);
 			$('#foodBtn').click(function() {
 				_transition(foodCostData);
-				$('#foodSvg').show();
+				$('#foodSvg').fadeIn();
 				$('#dateSvg').hide();
 			});
 			$('#travelBtn').click(function() {
 				_transition(travelCostData);
-				$('#foodSvg').show();
+				$('#foodSvg').fadeIn();
 				$('#dateSvg').hide();
 			});
 			$('#entBtn').click(function() {
 				_transition(entCostData);
-				$('#foodSvg').show();
+				$('#foodSvg').fadeIn();
 				$('#dateSvg').hide();
 			});
 			$('#dateBtn').click(function() {
 				drawPie(dateAllData, dateAry);
 				$('#foodSvg').hide();
-				$('#dateSvg').show();
+				$('#dateSvg').fadeIn();
+				allg.append("text").text("全國").attr({
+		    		'fill': '#FFD460',
+		    		'text-anchor': 'middle',
+		    	});
+		    	likeg.append("text").text("Student like U").attr({
+		    		'fill': '#FFD460',
+		    		'text-anchor': 'middle',
+		    	});
 				// _transition();
 			});
 			$('#jajaBtn').click(function() {
 				drawPie(JajaAllData, jajaAry);
 				$('#foodSvg').hide();
-				$('#dateSvg').show();
+				$('#dateSvg').fadeIn();
 				// _transition();
 			});
 		} else {
@@ -481,7 +487,7 @@ $(document).ready(function() {
 			  	else 
 			    	return (d.x+4) * 80;
 			  },
-			  'y':384
+			  'y': sh-18
 			 })
 			 .transition()
 			 .duration(1500)
@@ -490,7 +496,7 @@ $(document).ready(function() {
 			    return d.w;
 			  },
 			  'y':function(d){
-			  	return 384 - d.w;
+			  	return sh-18 - d.w;
 			  }
 			 });
 
@@ -507,13 +513,13 @@ $(document).ready(function() {
 			  	else 
 			    	return (d.x+4) * 80;
 			  },
-			  'y':381
+			  'y': sh-21
 			 })
 			 .transition()
 			 .duration(1500)
 			 .attr({
 			  'y':function(d){
-			    return 381 - d.w;
+			    return sh-21 - d.w;
 			  }
 			 })
 			 .tween('number',function(d){
@@ -537,7 +543,7 @@ $(document).ready(function() {
 			  	else 
 			    	return (d.x+4) * 80;
 			  },
-			  'y':384
+			  'y': sh - 18
 			 })
 			 .transition()
 			 .duration(1500)
@@ -546,7 +552,7 @@ $(document).ready(function() {
 			    return d.w;
 			  },
 			  'y':function(d){
-			  	return 384 - d.w;
+			  	return sh - 18 - d.w;
 			  }
 			 });
 
@@ -566,13 +572,13 @@ $(document).ready(function() {
 			  	else 
 			    	return (d.x+4) * 80;
 			  },
-			  'y':381
+			  'y': sh - 21
 			 })
 			 .transition()
 			 .duration(1500)
 			 .attr({
 			  'y':function(d){
-			    return 381 - d.w;
+			    return sh - 21 - d.w;
 			  }
 			 })
 			 .tween('number',function(d){
@@ -601,7 +607,7 @@ $(document).ready(function() {
 				  	else 
 				    	return (d.x+4) * 80;
 				  },
-				  'y':397
+				  'y': sh-3
 			 });
 		}
 	};

@@ -183,21 +183,25 @@ li.active:after {
 }
 
 .total-content {
-    color: #ec6566;
+    color: #2D4059;
     font-size: 20px;
     margin-top: 109px;
     padding-top: 10px;
     margin-bottom: 10px;
     /*border-bottom:  3px solid #F07B3F;*/
-    border-bottom:  1px solid #EA5455;
-    border-top: 1px solid #EA5455;
+    /*border-bottom:  1px solid #EA5455;*/
+    /*border-top: 1px solid #EA5455;*/
+    background-color: #5578a7;
+    font-weight: bold;
 }
 
 .result-bar {
-    color: #ec6566;
-    border-bottom:  1px solid #EA5455;
+    color: #2D4059;
+    /*border-bottom:  1px solid #EA5455;*/
     border-top: 1px solid #EA5455;
     height: 110px;
+    background-color: #5578a7;
+    font-weight: bold;
 }
 
 .text-left {
@@ -213,21 +217,22 @@ li.active:after {
 }
 
 .text-center {
-    font-size: 36px;
-    color: #EA5455;
+    font-size: 42px;
+    color: #FFD460;
 }
 
 .result-center {
-    font-size: 40px;
-    color: #EA5455;
+    font-size: 54px;
+    color: #FFD460;
     position: absolute;
     left: 40%;
-    top: 115px;
+    top: 100px;
 }
 
 .text-right {
     position: relative;
     right: 8px;
+    padding-bottom: 5px;
 }
 
 .result-right {
@@ -350,4 +355,53 @@ li.active:after {
 
 #result {
     margin-top: 50px;
+}
+
+button#foodBtn {
+    border-top: 3px solid #FFD460;
+}
+
+.btns button {
+    width: 100%;
+    height: 60px;
+    color: #FFD460;
+    background-color: #2D4059;
+    border-top: 0;
+    border-bottom: 3px solid #FFD460;
+    border-left: 0;
+    border-right: 0;
+    font-size: 28px;
+}
+
+.btns button:hover {
+    color: #EA5455;
+    background-color: #344966;
+}
+
+.btns button.chosen {
+    color: #EA5455;
+    background-color: #344966;
+}
+
+#jajaBtn {
+    font-size: 20px;
+}
+
+.col-md-3.btns {
+    padding-right: 0;
+}
+
+#resultChart {
+    width: 860px;
+    height: 425px;
+    background-color: #344966;
+    border-top: 3px solid #FFD460;
+}
+
+#hint h1 {
+    position: relative;
+    left: 13%;
+    top: 100px;
+    color: #EA5455;
+    width: 80%;
 }

@@ -31,26 +31,26 @@
 						<div class="liner"></div>
 						<li class="active">
 	                     	<a href="#q1" data-toggle="tab" title="性別">
-	                      		<span class="round one">Q1</span> 
-	                  	</a></li>
-
-		                <li class=""><a href="#q2" data-toggle="tab" title="profile">
-		                    <span class="round two">Q2</span> 
+	                      		<span class="round one">Q1<i class=""></i></span> 
+	                  		</a>
+	                  	</li>
+		                <li class=""><a href="#q2" data-toggle="tab" title="學科領域">
+		                    <span class="round two">Q2<i class=""></i></span> 
 		                    </a>
 		                </li>
-                 		<li class=""><a href="#q3" data-toggle="tab" title="bootsnipp goodies">
-                     		<span class="round three">Q3</span> </a>
+                 		<li class=""><a href="#q3" data-toggle="tab" title="每學期生活費">
+                     		<span class="round three">Q3<i class=""></i></span> </a>
                      	</li>
 
-                     	<li class=""><a href="#q4" data-toggle="tab" title="blah blah">
-                         	<span class="round four">Q4</span> 
+                     	<li class=""><a href="#q4" data-toggle="tab" title="學歷階段">
+                         	<span class="round four">Q4<i class=""></i></span> 
                      	</a></li>
 
-                     	<li class=""><a href="#q5" data-toggle="tab" title="completed">
-                         	<span class="round five">Q5</span> </a>
+                     	<li class=""><a href="#q5" data-toggle="tab" title="生活型態">
+                         	<span class="round five">Q5<i class=""></i></span> </a>
                      	</li>
-                     	<li class=""><a href="#q6" data-toggle="tab" title="completed">
-                         	<span class="round five">Q6</span> </a>
+                     	<li class=""><a href="#q6" data-toggle="tab" title="學校地點">
+                         	<span class="round five">Q6<i class=""></i></span> </a>
                      	</li>
 					</ul>
 					<!-- <label class="btn round active" id="btn1"><input type="radio" name="toggle" checked>性別</label>
@@ -205,12 +205,21 @@
 				<span class="result-center"><span id="result">1339849</span></span>
 				<span class="result-right">位學生跟您很像</span>
 			</div>
-			<button id="foodBtn">每月食物上的花費</button>
-			<button id="travelBtn">每月交通上的花費</button>
-			<button id="entBtn">每月娛樂上的花費</button>
-			<button id="dateBtn">交往中的人數比例</button>
-			<button id="jajaBtn">交往中是同性情侶的人數比例</button>
-			<div id="result" class="row"></div>
+			<br><br>
+			<div class="row">
+				<div class="col-md-3 btns">
+					<button id="foodBtn">每月食物上的花費</button>
+					<button id="travelBtn">每月交通上的花費</button>
+					<button id="entBtn">每月娛樂上的花費</button>
+					<button id="dateBtn">交往中的人數比例</button>
+					<button id="jajaBtn" style="display: none;">交往中是同性情侶的人數比例</button>
+				</div>
+				<div id="resultChart" class="col-md-9">
+					<div id="hint">
+						<h1><i class="fa fa-hand-o-left"></i> 點選左列任一按紐觀看有趣的資訊！</h1>
+					</div>
+				</div>
+			</div>
 		</section>
 		<script type="text/javascript" src="js/jquery.animateNumber.min.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
