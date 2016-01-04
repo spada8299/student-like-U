@@ -51,7 +51,7 @@ var food_changeQ4 = [1,1,1,1];
 var food_changeQ5 = [1.1,0.94];
 var food_changeQ6 = [1.05,1,0.95,1.1,1];
 
-var cost_travel = [819,4108,210, 819];
+var cost_travel = [819,4108,0, 819];
 var travel_changeQ1 = [1,1];
 var travel_changeQ2 = [1,1,1,1,1,1,1,1,1];
 var travel_changeQ3 = [0.4,0.85,0.93,1.04,1.07];
