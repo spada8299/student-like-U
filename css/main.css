@@ -210,10 +210,10 @@ li.active:after {
 }
 
 .result-left {
-    position: absolute;
-    left: 10%;
+    position: relative;
+    left: 3%;
     font-size: 28px;
-    top: 120px;
+    top: 5px;
 }
 
 .text-center {
@@ -224,9 +224,9 @@ li.active:after {
 .result-center {
     font-size: 54px;
     color: #FFD460;
-    position: absolute;
-    left: 40%;
-    top: 100px;
+    position: relative;
+    left: 30%;
+    top: 15px;
 }
 
 .text-right {
@@ -236,10 +236,11 @@ li.active:after {
 }
 
 .result-right {
-    position: absolute;
-    right: 10%;
+    position: relative;
+    /*right: -70%;*/
+    left: 50%;
     font-size: 28px;
-    top: 120px;
+    top: 5px;
 }
 
 .report-btn {
