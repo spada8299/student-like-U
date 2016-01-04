@@ -114,11 +114,11 @@ $(document).ready(function() {
     			});
     $('#dateSvg').hide();
     var allg = ps.append("g")
-    			.attr("transform", "translate(" + sw / 4 + "," + sh / 2 + ")");
+    			.attr("transform", "translate(" + sw / 4.2 + "," + sh / 2 + ")");
     	
 
     var likeg = ps.append("g")
-    			.attr("transform", "translate(" + sw*3 / 4 + "," + sh / 2 + ")");
+    			.attr("transform", "translate(" + sw*3 / 4.2 + "," + sh / 2 + ")");
     	
 	$('#q1 .btn').click(function() {
 		myAry[0] = $(this).children('input').val();
@@ -651,18 +651,26 @@ $(document).ready(function() {
 				'fill': function(d) { return color(d.data.status); }
 			}).each(function(d) { this._current = d; });
 
-		var texta = elema.append('text')
+		var texta = elema.append('text').style("font-size", "24px").style("font-weight", "bold")
 		.attr({
 			'transform': function(d) { return "translate(" + labelArc.centroid(d) + ")"; },
-	    	'dy': '.35em',
-	    	'class': 'data'
-	    }).text(function(d) { return d.data.status +' '+ d.data.value*100 +'%'; });
-	    var textl = eleml.append('text')
+	    	'dy': '.60em',
+	    	'class': 'data',
+	    	'fill': '#fff',
+		    'text-anchor': 'middle',
+	    	// 'stroke': '#000',
+	    	// 'stroke-width': 0.8
+	    }).text(function(d) { return d.data.status +' '+ Math.round( d.data.value*10000 / 100 ) +'%     '; });
+	    var textl = eleml.append('text').style("font-size", "24px").style("font-weight", "bold")
 		.attr({
 			'transform': function(d) { return "translate(" + labelArc.centroid(d) + ")"; },
-	    	'dy': '.35em',
-	    	'class': 'data'
-	    }).text(function(d) { return d.data.status +' '+ d.data.value*100 +'%'; });
+	    	'dy': '.60em',
+	    	'class': 'data',
+	    	'fill': '#fff',
+		    'text-anchor': 'middle',
+	    	// 'stroke': '#000',
+	    	// 'stroke-width': 0.8
+	    }).text(function(d) { return d.data.status +' '+ Math.round( d.data.value*10000 / 100 ) +'%     '; });
 
 		var newPatha = allg.selectAll('path').data(pie(data));
 		var newPathl = likeg.selectAll('path').data(pie(like));
@@ -673,10 +681,10 @@ $(document).ready(function() {
 		var newTextl = likeg.selectAll('text.data').data(pie(like));
 		newTexta.transition()
 			 .duration(1500).attr('transform', function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-				.text(function(d) { return d.data.status +' '+ d.data.value*100 +'%'; });
+				.text(function(d) { return d.data.status +' '+ Math.round( d.data.value*10000 / 100 ) +'%     '; });
 		newTextl.transition()
 			 .duration(1500).attr('transform', function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-				.text(function(d) { return d.data.status +' '+ d.data.value*100 +'%'; });
+				.text(function(d) { return d.data.status +' '+ Math.round( d.data.value*10000 / 100 ) +'%     '; });
 
 		function arcTween(a) {
 		  var i = d3.interpolate(this._current, a);
