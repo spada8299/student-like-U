@@ -18,6 +18,7 @@ $(document).ready(function() {
 	    $(this).children(".fa-caret-up").fadeIn();
 	    otherBtn.children('.fa-caret-up').hide();
 	    $('a[href=\'#'+ qNum +'\'] span i').addClass('fa fa-check');
+	    $('.nav-tabs > .active').next('li').find('a').trigger('click');
 	});
 
 	$('.next-btn').click(function() {
@@ -26,6 +27,7 @@ $(document).ready(function() {
 	$('.pre-btn').click(function() {
 		$('.nav-tabs > .active').prev('li').find('a').trigger('click');
 	});
+
 	$('.btns button').click(function() {
 		$(this).addClass('chosen');
 		$('.btns button').not(this).removeClass('chosen');
