@@ -403,6 +403,7 @@ $(document).ready(function() {
 		if (complete >= 6) {
 			$('.report-btn').prop("disabled", false).removeClass("disable");
 			$('.finger').show();
+			parseAry(myAry);
 			for (var i = 0; i < foodCostAry.length; i++){
 				cost_food[3] = cost_food[3] * foodCostAry[i];
 				cost_travel[3] = cost_travel[3] * travelCostAry[i];
