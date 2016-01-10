@@ -39,4 +39,8 @@ $(document).ready(function() {
 	$('.btns button').not('#dateBtn, #jajaBtn').click(function() {
 		$('#jajaBtn').slideUp();
 	});
+
+	$('#myModal').on('show.bs.modal', function(e) {
+		
+	});
 });

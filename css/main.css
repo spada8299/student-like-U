@@ -55,10 +55,10 @@ ul {
 	background-color: #344966;
 }
 
-.btn-primary {
+/*.btn-primary {
 	width: 152px;
 	margin-top: 10px;
-}
+}*/
 
 .btn.active,
 .btn.active:hover {
@@ -405,4 +405,43 @@ button#foodBtn {
     top: 100px;
     color: #EA5455;
     width: 80%;
+}
+
+.finger {
+    color: #F07B3F;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+
+.modal-content {
+    background-color: #a2b6d0;
+}
+
+.modal-header {
+    background-color: #f7ba9a;
+}
+
+.modal-footer .btn {
+    font-size: 1em;
+}
+
+.modal-footer .btn:hover {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(234,84,85,1);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(234,84,85,1);
+    box-shadow: 0px 0px 0px 0px rgba(234,84,85,1);
+}
+
+.modal-footer .btn-primary,
+.modal-footer .btn-primary:hover {
+    color: #FFD460;
+}
+
+.modal-footer .btn-default {
+    background-color: #a2b6d0;
+}
+
+.modal-footer .btn-default,
+.modal-footer .btn-default:hover {
+    color: #EA5455;
 }

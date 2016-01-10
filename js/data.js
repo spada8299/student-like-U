@@ -402,6 +402,7 @@ $(document).ready(function() {
 		console.log(foodCostAry);
 		if (complete >= 6) {
 			$('.report-btn').prop("disabled", false).removeClass("disable");
+			$('.finger').show();
 			for (var i = 0; i < foodCostAry.length; i++){
 				cost_food[3] = cost_food[3] * foodCostAry[i];
 				cost_travel[3] = cost_travel[3] * travelCostAry[i];
@@ -416,6 +417,7 @@ $(document).ready(function() {
 				entCostData[i] = { x: i+1, w: cost_ent[i]/20, value: cost_ent[i] };
 			}
 			// for (var i = 0; i < date.length*2 ; i+=2) {
+				console.log(typeof(date[0]));
 				dateAllData[0] = { status: '交往中', value: date[0] };
 				dateAllData[1] = { status: '單身', value: 1 - date[0] };
 				var temp = date[0]*dateAry[0];
@@ -613,7 +615,7 @@ $(document).ready(function() {
 	};
 
 	function drawPie(data, like) {
-		console.log('pie:', data);
+		console.log('pie:', data, like);
 		var radius = 200;
 		var color = d3.scale.ordinal()
     		.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
